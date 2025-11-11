@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border m-0 p-0 font-vazir;
+  }
+
+  html, body {
+    @apply m-auto max-w-[1400px] min-h-screen font-vazir px-3;
+    font-weight: 300;
+    line-height: 1.5;
+    font-family: "Vazir", sans-serif; 
+
+  }
+
+  input, textarea, select, button {
+    @apply font-vazir;
+    font-family: "Vazir", sans-serif; 
+  }
+
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+}
+
+
+@font-face {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/Vazirmatn-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../assets/fonts/Vazirmatn-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/Vazirmatn-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/Vazirmatn-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Vazir";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/Vazirmatn-ExtraBold.ttf") format("truetype");
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: black !important;
+}
