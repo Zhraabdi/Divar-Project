@@ -1,5 +1,5 @@
-import { checkOtp } from "../../services/Auth"
-import { setCookie } from "../../utils/cookie";
+import { checkOtp } from "services/Auth"
+import { setCookie } from "utils/cookie";
 
 function CheckOtpForm({code, setCode, mobile, setStep}) {
 

@@ -1,4 +1,4 @@
-import { sendOtp } from "../../services/Auth"
+import { sendOtp } from "services/Auth"
 
 function SendOtpForm({mobile, setMobile, setStep}) {
 
