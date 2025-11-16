@@ -5,8 +5,12 @@ import AdminPage from "pages/AdminPage"
 import AuthPage from "pages/AuthPage"
 import DashboardPage from "pages/DashboardPage"
 import HomePage from "pages/HomePage"
+import { useProfileQuery } from "src/hooks/useProfileQuery"
 
 function Router() {
+  const { data, isPending, error } = useProfileQuery();
+  console.log("user information",data)
+  
   return (
     <Routes>
         <Route index element={<HomePage/>} />
