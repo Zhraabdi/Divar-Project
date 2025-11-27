@@ -7,12 +7,24 @@ import DashboardPage from "pages/DashboardPage"
 import HomePage from "pages/HomePage"
 import { useProfileQuery } from "hooks/useProfileQuery"
 
+import { RotatingLines } from 'react-loader-spinner'
+
+
 function Router() {
   const { data, isPending, error } = useProfileQuery();
   console.log("user information",data)
   console.log({data,isPending,error})
 
-  if (isPending) return <div>در حال بررسی ...</div>;
+  if (isPending) return <div className="flex justify-center items-center min-h-screen"><RotatingLines
+  visible={true}
+  height="66"
+  width="66"
+  color="#a62626"
+  strokeWidth="5"
+  animationDuration="0.75"
+  ariaLabel="rotating-lines-loading"
+  />
+  </div>;
 
   
   return (
